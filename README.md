@@ -29,8 +29,8 @@ Example run:
 ```python
 if __name__ == "__main__":
     # ASSUMPTION: Computed and groundtruth masks are labeled from 1 to N (N: number of connected components)
-    computed = imread("./computed.png")
-    gold = imread("./gold.png")
+    computed = imread("./example_data/computed.png")
+    gold = imread("./example_data/gold.png")
 
     computed = preprocessMask(computed)
     gold = preprocessMask(gold)
