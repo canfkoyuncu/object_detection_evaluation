@@ -21,7 +21,7 @@ Cytometry Part A, 2016.
 import numpy as np
 from skimage.measure import label
 from skimage.io import imread
-from matplotlib import pyplot as plt
+#from matplotlib import pyplot as plt
 from skimage.morphology import remove_small_objects
 
 OVERLAPPING_TH = 0.5
