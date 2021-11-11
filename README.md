@@ -25,6 +25,24 @@ The general steps of the algorithm is:
    
    ***Miss:*** If G_j matches with no C<sub>i</sub>.
 
+Example run:
+```python
+if __name__ == "__main__":
+    # ASSUMPTION: Computed and groundtruth masks are labeled from 1 to N (N: number of connected components)
+    computed = imread("./computed.png")
+    gold = imread("./gold.png")
+
+    computed = preprocessMask(computed)
+    gold = preprocessMask(gold)
+
+    tp, overseg, underseg, miss, fp = eval(computed, gold)
+    precision, recall, f1score = calculateMetrics(tp, overseg, underseg, miss, fp)
+
+    print(f"TP:{tp}, Oversegmentation:{overseg}, Undersegmentation:{underseg}, Miss:{miss}, False positive:{fp}")
+    print(f"Precision:{precision}, Recall:{recall}, F1-score:{f1score}")
+```
+
+
 Please cite one of the following papers if you use this code:
 
   [1] C. Koyuncu, G.N. Gunesli, et al., “DeepDistance: A Multi‐task Deep Regression Model for Cell Detection in Inverted
