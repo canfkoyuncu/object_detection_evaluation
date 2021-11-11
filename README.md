@@ -23,7 +23,7 @@ The general steps of the algorithm is:
    
    ***False positive:*** If C<sub>i</sub> matches with no G<sub>j</sub>.
    
-   ***Miss:*** If G_j matches with no C<sub>i</sub>.
+   ***Miss:*** If G<sub>j</sub> matches with no C<sub>i</sub>.
 
 Example run:
 ```python
